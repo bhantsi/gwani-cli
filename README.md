@@ -1,4 +1,8 @@
 # GwaniCLI
+![CI](https://github.com/bhantsi/gwani-cli/workflows/CI%2FCD%20Pipeline/badge.svg)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 
 A command-line interface for accessing Quranic verses and translations with elegant formatting and caching capabilities.
 
