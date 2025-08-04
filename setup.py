@@ -29,7 +29,7 @@ setup(
     description="A command-line interface for accessing Quranic verses and translations",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/b-hantsi/gwani-cli",
+    url="https://github.com/bhantsi/gwani-cli",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -65,8 +65,8 @@ setup(
     },
     keywords="quran, islam, cli, terminal, verses, translation",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/gwani-cli/issues",
-        "Source": "https://github.com/yourusername/gwani-cli",
-        "Documentation": "https://github.com/yourusername/gwani-cli#readme",
+        "Bug Reports": "https://github.com/bhantsi/gwani-cli/issues",
+        "Source": "https://github.com/bhantsi/gwani-cli",
+        "Documentation": "https://github.com/bhantsi/gwani-cli#readme",
     },
 )
