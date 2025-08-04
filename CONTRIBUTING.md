@@ -12,7 +12,7 @@ Thank you for your interest in contributing to GwaniCLI! This guide will help yo
 
 1. Fork and clone the repository:
 ```bash
-git clone https://github.com/b-hantsi/gwani-cli.git
+git clone https://github.com/bhantsi/gwani-cli.git
 cd gwani-cli
 ```
 

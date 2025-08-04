@@ -21,7 +21,7 @@ pip install gwanicli
 
 ### From Source
 ```bash
-git clone https://github.com/b-hantsi/gwani-cli.git
+git clone https://github.com/bhantsi/gwani-cli.git
 cd gwani-cli
 pip install -e .
 ```
@@ -138,7 +138,7 @@ Common translation identifiers:
 
 ### Setup Development Environment
 ```bash
-git clone https://github.com/yourusername/gwani-cli.git
+git clone https://github.com/bhantsi/gwani-cli.git
 cd gwani-cli
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
