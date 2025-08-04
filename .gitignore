@@ -151,6 +151,16 @@ Thumbs.db
 cache.db
 config.toml
 
+# Distribution / packaging builds
+build/
+dist/
+
 # Logs
 *.log
 logs/
+
+# Local development and strategy files
+*_STRATEGY.md
+*_TEMPLATES.md
+POST_PUBLICATION_*.md
+SOCIAL_MEDIA_*.md

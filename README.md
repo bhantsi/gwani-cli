@@ -1,7 +1,9 @@
 # GwaniCLI
 ![CI](https://github.com/bhantsi/gwani-cli/workflows/CI%2FCD%20Pipeline/badge.svg)
+![PyPI version](https://badge.fury.io/py/gwanicli.svg)
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Downloads](https://pepy.tech/badge/gwanicli)
 
 
 A command-line interface for accessing Quranic verses and translations with elegant formatting and caching capabilities.
@@ -200,9 +202,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [FAQ](https://github.com/yourusername/gwani-cli/wiki/FAQ)
-2. Search [existing issues](https://github.com/yourusername/gwani-cli/issues)
-3. Create a [new issue](https://github.com/yourusername/gwani-cli/issues/new)
+1. Check the [Issues](https://github.com/bhantsi/gwani-cli/issues)
+2. Create a [new issue](https://github.com/bhantsi/gwani-cli/issues/new)
 
 ---
 
