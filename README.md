@@ -18,7 +18,7 @@ A command-line interface for accessing Quranic verses and translations with eleg
 
 ## Installation
 
-### From PyPI (when published)
+### From PyPI
 ```bash
 pip install gwanicli
 ```
