@@ -19,7 +19,7 @@ from .utils import setup_logging, handle_error
 @click.group()
 @click.version_option(version=__version__, prog_name="gwani")
 @click.option('--verbose', '-v', is_flag=True, help='Enable verbose logging')
-@click.option('--arabic-mode', type=click.Choice(['auto', 'unicode', 'transliteration', 'both']), 
+@click.option('--arabic-mode', type=click.Choice(['auto', 'unicode', 'transliteration', 'both']),
               default='auto', help='Arabic text display mode')
 @click.pass_context
 def gwani(ctx, verbose, arabic_mode):
@@ -84,7 +84,7 @@ def random(ctx, translation: Optional[str], no_cache: bool, json_output: bool, a
 @click.option('--arabic-style', type=click.Choice(['simple', 'bordered', 'highlighted']),
               default='simple', help='Arabic text display style (for legacy formatter)')
 @click.pass_context
-def surah(ctx, surah_identifier: str, ayah: Optional[int], translation: Optional[str], 
+def surah(ctx, surah_identifier: str, ayah: Optional[int], translation: Optional[str],
           no_cache: bool, json_output: bool, arabic_style: str):
     """Get ayahs from a specific surah by number or name."""
     try:
@@ -100,14 +100,18 @@ def surah(ctx, surah_identifier: str, ayah: Optional[int], translation: Optional
             cache = Cache()
             cache_wrapper = CacheWrapper(client, cache)
             if ayah:
-                verse_data = cache_wrapper.get_ayah_from_surah(surah_identifier, ayah, translation)
+                verse_data = cache_wrapper.get_ayah_from_surah(
+                    surah_identifier, ayah, translation)
             else:
-                verse_data = cache_wrapper.get_ayah_from_surah(surah_identifier, None, translation)
+                verse_data = cache_wrapper.get_ayah_from_surah(
+                    surah_identifier, None, translation)
         else:
             if ayah:
-                verse_data = client.get_ayah_from_surah(surah_identifier, ayah, translation)
+                verse_data = client.get_ayah_from_surah(
+                    surah_identifier, ayah, translation)
             else:
-                verse_data = client.get_ayah_from_surah(surah_identifier, None, translation)
+                verse_data = client.get_ayah_from_surah(
+                    surah_identifier, None, translation)
 
         # Use smart formatter for better Arabic display
         if json_output:
@@ -141,31 +145,34 @@ def surah(ctx, surah_identifier: str, ayah: Optional[int], translation: Optional
 def fonts(ctx):
     """Check Arabic text display capabilities and show font recommendations."""
     formatter = SmartArabicFormatter()
-    
-    click.echo(click.style("🔍 Arabic Text Display Capabilities", fg='cyan', bold=True))
+
+    click.echo(click.style(
+        "🔍 Arabic Text Display Capabilities", fg='cyan', bold=True))
     click.echo("=" * 50)
-    
+
     # Show terminal info
     capabilities = formatter.get_capabilities_info()
     terminal_info = capabilities['terminal_info']
-    
+
     click.echo(click.style("Terminal Information:", fg='blue', bold=True))
     click.echo(f"  • Terminal: {terminal_info['term']}")
     click.echo(f"  • Program: {terminal_info['term_program']}")
     click.echo(f"  • Platform: {terminal_info['platform']}")
     click.echo(f"  • Encoding: {terminal_info['encoding']}")
     click.echo()
-    
+
     # Show Arabic support status
     if capabilities['arabic_support']:
-        click.echo(click.style("✅ Arabic Support: Enabled", fg='green', bold=True))
+        click.echo(click.style(
+            "✅ Arabic Support: Enabled", fg='green', bold=True))
         click.echo("Your terminal can display Arabic text properly!")
     else:
-        click.echo(click.style("⚠️  Arabic Support: Limited", fg='yellow', bold=True))
+        click.echo(click.style(
+            "⚠️  Arabic Support: Limited", fg='yellow', bold=True))
         click.echo("Your terminal has limited Arabic text support.")
-    
+
     click.echo()
-    
+
     # Show test text in different modes
     click.echo(click.style("📝 Test Display:", fg='blue', bold=True))
     test_verse = {
@@ -175,13 +182,14 @@ def fonts(ctx):
         'surah_number': 1,
         'ayah_number': 1
     }
-    
+
     click.echo(click.style("Unicode mode:", fg='cyan'))
     formatter.format_verse(test_verse, mode='unicode', show_translation=False)
-    
+
     click.echo(click.style("Transliteration mode:", fg='cyan'))
-    formatter.format_verse(test_verse, mode='transliteration', show_translation=False)
-    
+    formatter.format_verse(
+        test_verse, mode='transliteration', show_translation=False)
+
     # Show font recommendations
     formatter.display_font_recommendations()
 

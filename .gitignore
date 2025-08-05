@@ -164,3 +164,7 @@ logs/
 *_TEMPLATES.md
 POST_PUBLICATION_*.md
 SOCIAL_MEDIA_*.md
+
+# Development and testing files
+test_release.sh
+TESTING_CHECKLIST.md
