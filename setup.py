@@ -23,8 +23,8 @@ if requirements_path.exists():
 
 setup(
     name="gwanicli",
-    version="0.1.0",
-    author="Hamza Danjaji",
+    version="0.2.0",
+    author="B. Hantsi",
     author_email="bhantsi@gmail.com",
     description="A command-line interface for accessing Quranic verses and translations",
     long_description=long_description,

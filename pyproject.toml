@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gwanicli"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
     {name = "Hamza Danjaji", email = "bhantsi@gmail.com"},
 ]
