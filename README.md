@@ -73,6 +73,61 @@ gwani random --translation en.sahih
 gwani random --json --no-cache
 ```
 
+## Arabic Text Display
+
+GwaniCLI provides intelligent Arabic text rendering that automatically adapts to your terminal's capabilities.
+
+### Display Modes
+
+Use the global `--arabic-mode` option to control how Arabic text is displayed:
+
+```bash
+# Automatic detection (default)
+gwani random
+
+# Unicode Arabic text only
+gwani --arabic-mode unicode random
+
+# Transliterated text only  
+gwani --arabic-mode transliteration random
+
+# Both Arabic and transliteration
+gwani --arabic-mode both random
+```
+
+### Font Recommendations
+
+Check your terminal's Arabic support and get font recommendations:
+
+```bash
+gwani fonts
+```
+
+For optimal Arabic display, consider installing these fonts:
+
+**Ubuntu/Debian:**
+```bash
+sudo apt install fonts-noto fonts-amiri fonts-scheherazade-new
+```
+
+**macOS (with Homebrew):**
+```bash
+brew install --cask font-noto-sans-arabic font-amiri font-scheherazade-new
+```
+
+**Recommended fonts:**
+- Noto Sans Arabic (comprehensive Unicode support)
+- Amiri (traditional Arabic calligraphy)
+- Cairo (modern, clean Arabic font)
+- Scheherazade New (academic/traditional style)
+
+### Terminal Compatibility
+
+GwaniCLI works with any terminal:
+- **Modern terminals** (xterm, GNOME Terminal, iTerm2, etc.): Full Unicode Arabic support
+- **Basic terminals**: Automatic fallback to transliteration
+- **Windows**: Enhanced UTF-8 support with automatic optimizations
+
 ### `gwani surah <identifier>`
 Get verses from a specific surah by number or name.
 
@@ -91,6 +146,20 @@ gwani surah 1                    # Entire Al-Fatiha
 gwani surah 2 --ayah 255        # Ayat al-Kursi
 gwani surah "Al-Fatiha" --json  # JSON format
 ```
+
+### `gwani fonts`
+Check Arabic text display capabilities and get font recommendations.
+
+**Examples:**
+```bash
+gwani fonts  # Check terminal capabilities and show font recommendations
+```
+
+This command will:
+- Test your terminal's Arabic text support
+- Show terminal and encoding information
+- Display sample Arabic text in different modes
+- Provide font installation instructions for your platform
 
 ### `gwani config`
 Manage configuration settings.
